@@ -13,6 +13,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "/Users/ahonchar/done/libft/libft.h"
 
 #define BUFF_SIZE 10
 
@@ -20,40 +21,24 @@
 
 int		get_next_line(const int fd, char **line)
 {
-	char	*buff;
-	int		size;
-	int		i;
-	int		new_line;
-	//bool	line;
+	t_list *file;
 
-	buff = (char *)malloc(BUFF_SIZE + 1);
-	size = read(fd, buff, BUFF_SIZE);
-	buff[size] = '\0';
-	if (!size)
-		return (0);
-	if (size == -1)
-		return (-1);
-	i = 0;
-	new_line = 0;
-	while (1)
+	file = search_in_list(list, fd)
+	if (!file)
+		file = create_list(fd);
+	
+
+}
+
+t_list	*search_in_list(t_list *list, int fd)
+{
+	while (list)
 	{
-		while (buff[i] != '\n' && buff[i])
-		{
-			**line = buff[i];
-			i++;
-			(*line)++;
-		}
-		if (buff[i] == '\n')
-		{
-			free(buff);
-			return (1);
-		}
-		i = 0;
-		size = read(fd, buff, BUFF_SIZE);
-		if (!size)
-			return (0);
+		if (list->content_size == (size_t)fd)
+			return (list);
+		list = list->next;
 	}
-	return (1);
+	return (NULL);
 }
 
 int		main(int ac, char **av)

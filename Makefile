@@ -21,7 +21,7 @@ $(NAme)
 	gcc $(FLAGS) -c $^
 
 All: $(OBJ)
-	gcc $(FLAGS) -o $(NAME) $(OBJ)
+	gcc $(FLAGS) -o $(NAME) $(OBJ) -L ~/done/libft/libft.a
 clean:
 	rm -rf *.o
 	rm -rf *~
