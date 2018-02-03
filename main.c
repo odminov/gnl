@@ -17,20 +17,6 @@
 
 #define BUFF_SIZE 10
 
-
-
-int		get_next_line(const int fd, char **line)
-{
-	t_list *file;
-
-	file = search_in_list(list, fd)
-	if (!file)
-		file = create_list(fd);
-	else
-	
-
-}
-
 t_list	*search_in_list(t_list *list, int fd)
 {
 	while (list)
@@ -40,6 +26,83 @@ t_list	*search_in_list(t_list *list, int fd)
 		list = list->next;
 	}
 	return (NULL);
+}
+
+int		copy_from_list(char **line, t_list *list)
+{
+	char	*str;
+	char	**begin_line;
+
+	begin_line = line;
+	while (list->content)
+	{
+		(**line)++ = list->content++;
+		if (*(list->content) == '\n')
+		{
+			line = begin_line;
+			list->content++;
+			str = (char *)malloc(sizeof(str) * ft_strlen(list->content) + 1);
+			ft_memcpy(str, list->content, ft_strlen(list_content) + 1);
+			free(list->content);
+			list->content = str;
+			return (1);
+		}
+	}
+	free(list->content);
+	list->content = NULL;
+	return (0);
+}
+
+
+
+int		read_line(t_list *list, char **line)
+{
+	int		i;
+	int		ret;
+	char	**begin;
+	char	*buf;
+
+	buf = (char *)malloc(sizeof(buf) * BUFF_SIZE + 1);
+	buf[BUFF_SIZE] = '\0';
+	begin = line;
+	if (list->content)
+		if(copy_from_list(line, list->content))
+			return ();
+	while ((ret = read(list->content_size, buff, BUFF_SIZE)) > 0)
+	{
+		while (list->content[i])
+		{
+			(**line)++ = list->content[i++];
+			if (list->content[i] == '\n')
+			{	
+
+				break;
+			}
+		}
+		if (list->content[i] == '\n' || (ret < BUFF_SIZE))
+			break;
+	}
+	i++;
+	line = begin;
+}
+
+int		get_next_line(const int fd, char **line)
+{
+	static t_list *files;
+	t_list	*current;
+
+	if (!files)
+	{
+		files = create_list(fd);
+		return (read_line(files, line));
+	}
+	else
+	{
+		current = search_in_list(files, fd);
+		if (!current)
+			current = add_to_list(files, fd);
+	}
+	return (read_line(current, line));
 }
 
 int		main(int ac, char **av)
