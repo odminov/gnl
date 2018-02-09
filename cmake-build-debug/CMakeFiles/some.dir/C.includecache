@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ahonchar/done/libft/ft_lstadd.c
+libft.h
+/Users/ahonchar/done/libft/libft.h
+
+/Users/ahonchar/done/libft/ft_lstnew.c
+libft.h
+/Users/ahonchar/done/libft/libft.h
+stdlib.h
+-
+
+/Users/ahonchar/done/libft/ft_memcpy.c
+string.h
+-
+
+/Users/ahonchar/done/libft/ft_strlen.c
+string.h
+-
+
+/Users/ahonchar/done/libft/libft.h
+string.h
+-
+
+/Users/ahonchar/test/main.c
+fcntl.h
+-
+unistd.h
+-
+stdio.h
+-
+stdlib.h
+-
+/Users/ahonchar/done/libft/libft.h
+-
+

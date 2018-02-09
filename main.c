@@ -25,103 +25,99 @@ t_list	*search_in_list(t_list *list, int fd)
 			return (list);
 		list = list->next;
 	}
-	return (NULL);
+	return (NULL);	
 }
-
-int		copy_from_list(char **line, t_list *list)
-{
-	char	*str;
-	char	**begin_line;
-
-	begin_line = line;
-	while (list->content)
-	{
-		(**line)++ = list->content++;
-		if (*(list->content) == '\n')
-		{
-			line = begin_line;
-			list->content++;
-			str = (char *)malloc(sizeof(str) * ft_strlen(list->content) + 1);
-			ft_memcpy(str, list->content, ft_strlen(list_content) + 1);
-			free(list->content);
-			list->content = str;
-			return (1);
-		}
-	}
-	free(list->content);
-	list->content = NULL;
-	return (0);
-}
-
-
 
 int		read_line(t_list *list, char **line)
 {
-	int		i;
-	int		ret;
-	char	**begin;
 	char	*buf;
+	char	*out;
+	int		ret;
 
-	buf = (char *)malloc(sizeof(buf) * BUFF_SIZE + 1);
-	buf[BUFF_SIZE] = '\0';
-	begin = line;
+	out = NULL;
 	if (list->content)
-		if(copy_from_list(line, list->content))
-			return ();
-	while ((ret = read(list->content_size, buff, BUFF_SIZE)) > 0)
+		read_from_list(list, line);
+	else
 	{
-		while (list->content[i])
+		buf = strnew(BUFF_SIZE);
+		ret = read(list->content_size, buf, BUFF_SIZE);
+		while (!ft_strchr(buf, '\n'))
 		{
-			(**line)++ = list->content[i++];
-			if (list->content[i] == '\n')
-			{	
+			if (!out)
+				*out = ft_strnew(BUFF_SIZE);
+			else
+				
 
-				break;
-			}
+			ret = read(list->content_size, buf, BUFF_SIZE);
 		}
-		if (list->content[i] == '\n' || (ret < BUFF_SIZE))
-			break;
 	}
-	i++;
-	line = begin;
 }
 
 int		get_next_line(const int fd, char **line)
 {
 	static t_list *files;
-	t_list	*current;
+	t_list *current;
 
+	if (!line || fd < 0 || (read(fd, NULL, 0)) < 0)
+		return (-1);
 	if (!files)
 	{
-		files = create_list(fd);
-		return (read_line(files, line));
+		files = lstnew(NULL, 0);
+		files->content_size = fd;
 	}
 	else
 	{
 		current = search_in_list(files, fd);
 		if (!current)
-			current = add_to_list(files, fd);
+		{
+			current = lstnew(NULL, 0);
+			current->content_size = fd;
+			lstadd(&files, current);
+		}
+		else
+			return (read_line(current, line));
 	}
-	return (read_line(current, line));
+	return (read_line(files, line));
 }
 
-int		main(int ac, char **av)
+//int		main(int ac, char **av)
+//{
+//	int		i;
+//	char	*out;
+//	char	*begin;
+//	int		fd;
+//
+//	if (ac != 2)
+//		return (printf("usage:\t%s filename\n", av[0]));
+//	i = 0;
+//	out = (char *)malloc(1000);
+//	out[999] = '\0';
+//	begin = out;
+//	fd = open(av[1], O_RDONLY);
+//	while (get_next_line(fd, &out) > 0)
+//		printf("%s\n", out);
+//	//get_next_line(fd, &out);
+//	//printf("%s\n", begin);
+//	return (0);
+//}
+
+int		main(void)
 {
 	int		i;
 	char	*out;
 	char	*begin;
 	int		fd;
 
-	if (ac != 2)
-		return (printf("usage:\t%s filename\n", av[0]));
 	i = 0;
 	out = (char *)malloc(1000);
 	out[999] = '\0';
 	begin = out;
-	fd = open(av[1], O_RDONLY);
+	fd = open("/Users/ahonchar/test/file1", O_RDONLY);
+	if (fd < 3)
+		return (printf("invalid file, open = %d\n", fd));
 	while (get_next_line(fd, &out) > 0)
-		*out++ = '\n'; 
+		printf("%s\n", out);
 	//get_next_line(fd, &out);
-	printf("%s\n", begin);
+	//printf("%s\n", begin);
 	return (0);
 }

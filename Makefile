@@ -10,21 +10,19 @@
 #                                                                              #
 #******************************************************************************#
 
-NAME = test
+NAME = gnl
 SRC = main.c
 OBJ = main.o
 FLAGS = -Wextra -Wall -Werror
-
-$(NAme)
 
 %.o:%.c
 	gcc $(FLAGS) -c $^
 
 All: $(OBJ)
-	gcc $(FLAGS) -o $(NAME) $(OBJ) -L ~/done/libft/libft.a
+	gcc $(FLAGS) -o $(NAME) $(OBJ)  -L ~/done/libft/ -lft 
 clean:
 	rm -rf *.o
 	rm -rf *~
 fclean: clean
-	rm -rf test
+	rm -rf $(NAME)
 re: fclean All
