@@ -20,8 +20,28 @@ stdlib.h
 string.h
 -
 
+/Users/ahonchar/done/libft/ft_memset.c
+string.h
+-
+
+/Users/ahonchar/done/libft/ft_strchr.c
+string.h
+-
+
+/Users/ahonchar/done/libft/ft_strjoin.c
+libft.h
+/Users/ahonchar/done/libft/libft.h
+stdlib.h
+-
+
 /Users/ahonchar/done/libft/ft_strlen.c
 string.h
+-
+
+/Users/ahonchar/done/libft/ft_strnew.c
+libft.h
+/Users/ahonchar/done/libft/libft.h
+stdlib.h
 -
 
 /Users/ahonchar/done/libft/libft.h

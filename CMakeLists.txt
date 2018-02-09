@@ -10,4 +10,8 @@ add_executable(some
         /Users/ahonchar/done/libft/ft_lstadd.c
         /Users/ahonchar/done/libft/ft_lstnew.c
         /Users/ahonchar/done/libft/ft_memcpy.c
-        /Users/ahonchar/done/libft/ft_strlen.c)
+        /Users/ahonchar/done/libft/ft_strlen.c
+        /Users/ahonchar/done/libft/ft_strchr.c
+        /Users/ahonchar/done/libft/ft_strjoin.c
+        /Users/ahonchar/done/libft/ft_strnew.c
+        /Users/ahonchar/done/libft/ft_memset.c)

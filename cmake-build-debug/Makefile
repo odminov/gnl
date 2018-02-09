@@ -204,6 +204,87 @@ Users/ahonchar/done/libft/ft_memcpy.c.s:
 	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memcpy.c.s
 .PHONY : Users/ahonchar/done/libft/ft_memcpy.c.s
 
+Users/ahonchar/done/libft/ft_memset.o: Users/ahonchar/done/libft/ft_memset.c.o
+
+.PHONY : Users/ahonchar/done/libft/ft_memset.o
+
+# target to build an object file
+Users/ahonchar/done/libft/ft_memset.c.o:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.o
+.PHONY : Users/ahonchar/done/libft/ft_memset.c.o
+
+Users/ahonchar/done/libft/ft_memset.i: Users/ahonchar/done/libft/ft_memset.c.i
+
+.PHONY : Users/ahonchar/done/libft/ft_memset.i
+
+# target to preprocess a source file
+Users/ahonchar/done/libft/ft_memset.c.i:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.i
+.PHONY : Users/ahonchar/done/libft/ft_memset.c.i
+
+Users/ahonchar/done/libft/ft_memset.s: Users/ahonchar/done/libft/ft_memset.c.s
+
+.PHONY : Users/ahonchar/done/libft/ft_memset.s
+
+# target to generate assembly for a file
+Users/ahonchar/done/libft/ft_memset.c.s:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.s
+.PHONY : Users/ahonchar/done/libft/ft_memset.c.s
+
+Users/ahonchar/done/libft/ft_strchr.o: Users/ahonchar/done/libft/ft_strchr.c.o
+
+.PHONY : Users/ahonchar/done/libft/ft_strchr.o
+
+# target to build an object file
+Users/ahonchar/done/libft/ft_strchr.c.o:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.o
+.PHONY : Users/ahonchar/done/libft/ft_strchr.c.o
+
+Users/ahonchar/done/libft/ft_strchr.i: Users/ahonchar/done/libft/ft_strchr.c.i
+
+.PHONY : Users/ahonchar/done/libft/ft_strchr.i
+
+# target to preprocess a source file
+Users/ahonchar/done/libft/ft_strchr.c.i:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.i
+.PHONY : Users/ahonchar/done/libft/ft_strchr.c.i
+
+Users/ahonchar/done/libft/ft_strchr.s: Users/ahonchar/done/libft/ft_strchr.c.s
+
+.PHONY : Users/ahonchar/done/libft/ft_strchr.s
+
+# target to generate assembly for a file
+Users/ahonchar/done/libft/ft_strchr.c.s:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.s
+.PHONY : Users/ahonchar/done/libft/ft_strchr.c.s
+
+Users/ahonchar/done/libft/ft_strjoin.o: Users/ahonchar/done/libft/ft_strjoin.c.o
+
+.PHONY : Users/ahonchar/done/libft/ft_strjoin.o
+
+# target to build an object file
+Users/ahonchar/done/libft/ft_strjoin.c.o:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o
+.PHONY : Users/ahonchar/done/libft/ft_strjoin.c.o
+
+Users/ahonchar/done/libft/ft_strjoin.i: Users/ahonchar/done/libft/ft_strjoin.c.i
+
+.PHONY : Users/ahonchar/done/libft/ft_strjoin.i
+
+# target to preprocess a source file
+Users/ahonchar/done/libft/ft_strjoin.c.i:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.i
+.PHONY : Users/ahonchar/done/libft/ft_strjoin.c.i
+
+Users/ahonchar/done/libft/ft_strjoin.s: Users/ahonchar/done/libft/ft_strjoin.c.s
+
+.PHONY : Users/ahonchar/done/libft/ft_strjoin.s
+
+# target to generate assembly for a file
+Users/ahonchar/done/libft/ft_strjoin.c.s:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.s
+.PHONY : Users/ahonchar/done/libft/ft_strjoin.c.s
+
 Users/ahonchar/done/libft/ft_strlen.o: Users/ahonchar/done/libft/ft_strlen.c.o
 
 .PHONY : Users/ahonchar/done/libft/ft_strlen.o
@@ -230,6 +311,33 @@ Users/ahonchar/done/libft/ft_strlen.s: Users/ahonchar/done/libft/ft_strlen.c.s
 Users/ahonchar/done/libft/ft_strlen.c.s:
 	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strlen.c.s
 .PHONY : Users/ahonchar/done/libft/ft_strlen.c.s
+
+Users/ahonchar/done/libft/ft_strnew.o: Users/ahonchar/done/libft/ft_strnew.c.o
+
+.PHONY : Users/ahonchar/done/libft/ft_strnew.o
+
+# target to build an object file
+Users/ahonchar/done/libft/ft_strnew.c.o:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o
+.PHONY : Users/ahonchar/done/libft/ft_strnew.c.o
+
+Users/ahonchar/done/libft/ft_strnew.i: Users/ahonchar/done/libft/ft_strnew.c.i
+
+.PHONY : Users/ahonchar/done/libft/ft_strnew.i
+
+# target to preprocess a source file
+Users/ahonchar/done/libft/ft_strnew.c.i:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.i
+.PHONY : Users/ahonchar/done/libft/ft_strnew.c.i
+
+Users/ahonchar/done/libft/ft_strnew.s: Users/ahonchar/done/libft/ft_strnew.c.s
+
+.PHONY : Users/ahonchar/done/libft/ft_strnew.s
+
+# target to generate assembly for a file
+Users/ahonchar/done/libft/ft_strnew.c.s:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.s
+.PHONY : Users/ahonchar/done/libft/ft_strnew.c.s
 
 main.o: main.c.o
 
@@ -276,9 +384,21 @@ help:
 	@echo "... Users/ahonchar/done/libft/ft_memcpy.o"
 	@echo "... Users/ahonchar/done/libft/ft_memcpy.i"
 	@echo "... Users/ahonchar/done/libft/ft_memcpy.s"
+	@echo "... Users/ahonchar/done/libft/ft_memset.o"
+	@echo "... Users/ahonchar/done/libft/ft_memset.i"
+	@echo "... Users/ahonchar/done/libft/ft_memset.s"
+	@echo "... Users/ahonchar/done/libft/ft_strchr.o"
+	@echo "... Users/ahonchar/done/libft/ft_strchr.i"
+	@echo "... Users/ahonchar/done/libft/ft_strchr.s"
+	@echo "... Users/ahonchar/done/libft/ft_strjoin.o"
+	@echo "... Users/ahonchar/done/libft/ft_strjoin.i"
+	@echo "... Users/ahonchar/done/libft/ft_strjoin.s"
 	@echo "... Users/ahonchar/done/libft/ft_strlen.o"
 	@echo "... Users/ahonchar/done/libft/ft_strlen.i"
 	@echo "... Users/ahonchar/done/libft/ft_strlen.s"
+	@echo "... Users/ahonchar/done/libft/ft_strnew.o"
+	@echo "... Users/ahonchar/done/libft/ft_strnew.i"
+	@echo "... Users/ahonchar/done/libft/ft_strnew.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

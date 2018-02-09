@@ -9,7 +9,17 @@ CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_lstnew.c.o: /Users/ahonchar/don
 
 CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memcpy.c.o: /Users/ahonchar/done/libft/ft_memcpy.c
 
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.o: /Users/ahonchar/done/libft/ft_memset.c
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.o: /Users/ahonchar/done/libft/ft_strchr.c
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o: /Users/ahonchar/done/libft/ft_strjoin.c
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o: /Users/ahonchar/done/libft/libft.h
+
 CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strlen.c.o: /Users/ahonchar/done/libft/ft_strlen.c
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o: /Users/ahonchar/done/libft/ft_strnew.c
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o: /Users/ahonchar/done/libft/libft.h
 
 CMakeFiles/some.dir/main.c.o: /Users/ahonchar/done/libft/libft.h
 CMakeFiles/some.dir/main.c.o: ../main.c

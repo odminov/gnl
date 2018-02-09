@@ -177,13 +177,113 @@ CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strlen.c.o.provides: CMakeFiles
 CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strlen.c.o.provides.build: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strlen.c.o
 
 
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.o: CMakeFiles/some.dir/flags.make
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.o: /Users/ahonchar/done/libft/ft_strchr.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ahonchar/test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.o   -c /Users/ahonchar/done/libft/ft_strchr.c
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ahonchar/done/libft/ft_strchr.c > CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.i
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ahonchar/done/libft/ft_strchr.c -o CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.s
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.o.requires:
+
+.PHONY : CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.o.requires
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.o.provides: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.o.requires
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.o.provides.build
+.PHONY : CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.o.provides
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.o.provides.build: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.o
+
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o: CMakeFiles/some.dir/flags.make
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o: /Users/ahonchar/done/libft/ft_strjoin.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ahonchar/test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o   -c /Users/ahonchar/done/libft/ft_strjoin.c
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ahonchar/done/libft/ft_strjoin.c > CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.i
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ahonchar/done/libft/ft_strjoin.c -o CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.s
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o.requires:
+
+.PHONY : CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o.requires
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o.provides: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o.requires
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o.provides.build
+.PHONY : CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o.provides
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o.provides.build: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o
+
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o: CMakeFiles/some.dir/flags.make
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o: /Users/ahonchar/done/libft/ft_strnew.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ahonchar/test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o   -c /Users/ahonchar/done/libft/ft_strnew.c
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ahonchar/done/libft/ft_strnew.c > CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.i
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ahonchar/done/libft/ft_strnew.c -o CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.s
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o.requires:
+
+.PHONY : CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o.requires
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o.provides: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o.requires
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o.provides.build
+.PHONY : CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o.provides
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o.provides.build: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o
+
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.o: CMakeFiles/some.dir/flags.make
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.o: /Users/ahonchar/done/libft/ft_memset.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ahonchar/test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.o   -c /Users/ahonchar/done/libft/ft_memset.c
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ahonchar/done/libft/ft_memset.c > CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.i
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ahonchar/done/libft/ft_memset.c -o CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.s
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.o.requires:
+
+.PHONY : CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.o.requires
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.o.provides: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.o.requires
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.o.provides.build
+.PHONY : CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.o.provides
+
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.o.provides.build: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.o
+
+
 # Object files for target some
 some_OBJECTS = \
 "CMakeFiles/some.dir/main.c.o" \
 "CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_lstadd.c.o" \
 "CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_lstnew.c.o" \
 "CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memcpy.c.o" \
-"CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strlen.c.o"
+"CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strlen.c.o" \
+"CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.o" \
+"CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o" \
+"CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o" \
+"CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.o"
 
 # External object files for target some
 some_EXTERNAL_OBJECTS =
@@ -193,9 +293,13 @@ some: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_lstadd.c.o
 some: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_lstnew.c.o
 some: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memcpy.c.o
 some: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strlen.c.o
+some: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.o
+some: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o
+some: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o
+some: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.o
 some: CMakeFiles/some.dir/build.make
 some: CMakeFiles/some.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ahonchar/test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable some"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ahonchar/test/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable some"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/some.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -208,6 +312,10 @@ CMakeFiles/some.dir/requires: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_l
 CMakeFiles/some.dir/requires: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_lstnew.c.o.requires
 CMakeFiles/some.dir/requires: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memcpy.c.o.requires
 CMakeFiles/some.dir/requires: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strlen.c.o.requires
+CMakeFiles/some.dir/requires: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.o.requires
+CMakeFiles/some.dir/requires: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o.requires
+CMakeFiles/some.dir/requires: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o.requires
+CMakeFiles/some.dir/requires: CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.o.requires
 
 .PHONY : CMakeFiles/some.dir/requires
 

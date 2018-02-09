@@ -93,7 +93,19 @@
 		<Unit filename="/Users/ahonchar/done/libft/ft_memcpy.c">
 			<Option target="some"/>
 		</Unit>
+		<Unit filename="/Users/ahonchar/done/libft/ft_memset.c">
+			<Option target="some"/>
+		</Unit>
+		<Unit filename="/Users/ahonchar/done/libft/ft_strchr.c">
+			<Option target="some"/>
+		</Unit>
+		<Unit filename="/Users/ahonchar/done/libft/ft_strjoin.c">
+			<Option target="some"/>
+		</Unit>
 		<Unit filename="/Users/ahonchar/done/libft/ft_strlen.c">
+			<Option target="some"/>
+		</Unit>
+		<Unit filename="/Users/ahonchar/done/libft/ft_strnew.c">
 			<Option target="some"/>
 		</Unit>
 		<Unit filename="/Users/ahonchar/test/main.c">

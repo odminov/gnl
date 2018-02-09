@@ -4,6 +4,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_lstnew.c.o"
   "CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memcpy.c.o"
   "CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strlen.c.o"
+  "CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.o"
+  "CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o"
+  "CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o"
+  "CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.o"
   "some.pdb"
   "some"
 )
