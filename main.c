@@ -28,28 +28,96 @@ t_list	*search_in_list(t_list *list, int fd)
 	return (NULL);	
 }
 
-int		read_line(t_list *list, char **line)
+int		read_from_list(t_list *list, char **line)
 {
 	char	*buf;
+	char	*for_free;
+	char	*buf2;
+	int		i;
+
+	i = 0;
+	for_free = list->content;
+	while (*(list->content))
+	{
+		if (list->content++ == '\n')
+			break;
+		i++;
+	}
+	if (*(list->content) == '\n')
+	{
+		list->content++;
+		*line = ft_strnew(i);
+		ft_memcpy(*line, for_free, i);
+		buf2 = ft_strnew(ft_strlen(list->content));
+		ft_memcpy(buf2, list->content, ft_strlen(list->content));
+		free(for_free);
+		list->content = buf2;
+		return (1);
+	}
+	else
+	{
+		*line = ft_strnew(i);
+		ft_memcpy(*line, for_free, i);
+		free(for_free);
+		list->content = NULL;
+		return (0);
+	}
+}
+
+void	write_end(t_list *list, )
+
+int		read_line(t_list *list, char **line)
+{
+	char	*read_buf;
 	char	*out;
+	char	*buf;
+	char	*for_free;
 	int		ret;
+	int		i;
 
 	out = NULL;
 	if (list->content)
-		read_from_list(list, line);
+		if (read_from_list(list, line))
+			return (1);
 	else
 	{
-		buf = strnew(BUFF_SIZE);
-		ret = read(list->content_size, buf, BUFF_SIZE);
-		while (!ft_strchr(buf, '\n'))
+		read_buf = strnew(BUFF_SIZE);
+		ret = read(list->content_size, read_buf, BUFF_SIZE);
+		while (!ft_strchr(read_buf, '\n'))
 		{
 			if (!out)
+			{
 				*out = ft_strnew(BUFF_SIZE);
+				ft_memcpy(out, read_buf, BUFF_SIZE);
+			}
 			else
-				
-
-			ret = read(list->content_size, buf, BUFF_SIZE);
+			{
+				for_free = out;
+				out = ft_strjoin(out, read_buf);
+				free(for_free);
+			}
+			ret = read(list->content_size, read_buf, BUFF_SIZE);
 		}
+		i = 0;
+		while(read_buf[i] != '\n')
+			i++;
+		if (read_buf[i + 1])
+			write_end(list, read_buf, i);
+		if (!out)
+		{
+			out = ft_strnew(i);
+			ft_memcpy(out, read_buf, i)
+		}
+		else
+		{
+			buf = ft_strnew(i);
+			ft_memcpy(buf, read_buf, i);
+			for_free = out;
+			out = ft_strjoin(out, buf);
+			free(for_free);
+		}
+		free(read_buf);
+		free(buf);
 	}
 }
 
