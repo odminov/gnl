@@ -37,6 +37,7 @@ int		get_next_line(const int fd, char **line)
             free(*line);
     }
     *line = ft_strnew(0);
+    read_bytes = 0;
 	while (1)
 	{
 		i = -1;
@@ -64,7 +65,7 @@ int		get_next_line(const int fd, char **line)
 			buff = buff2;
 			return (1);
 		}
-		if (read_bytes < BUFF_SIZE)
+		if ((read_bytes > 0) && (read_bytes < BUFF_SIZE))
 			read_compleate = 1;
 		if (!(read_bytes = read(fd, buff, BUFF_SIZE)))
 			return (-1);
@@ -103,7 +104,7 @@ int		main(void)
 	fd = open("/Users/ahonchar/test/file1", O_RDONLY);
 	if (fd < 3)
 		return (printf("invalid file, open = %d\n", fd));
-	while (get_next_line(fd, &out) >= 0)
+	while (get_next_line(fd, &out) > 0)
  		printf("%s\n", out);
 	close(fd);
 	free(out);
