@@ -28,6 +28,12 @@ string.h
 string.h
 -
 
+/Users/ahonchar/done/libft/ft_strdup.c
+stdlib.h
+-
+string.h
+-
+
 /Users/ahonchar/done/libft/ft_strjoin.c
 libft.h
 /Users/ahonchar/done/libft/libft.h

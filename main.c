@@ -9,85 +9,96 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "get_next_line.h"
+#include "./libft/libft.h"
+//
 #include <fcntl.h>
-#include <unistd.h>
 #include <stdio.h>
-#include <stdlib.h>
-#include "/Users/ahonchar/done/libft/libft.h"
 
 #define BUFF_SIZE 10
+
+int		read_line(t_gnl *list, char *out)
+{
+    char    *temp;
+    char    *temp_buf;
+
+    if (*out)
+        free(out);
+    out = ft_strnew(0);
+    while (1)
+    {
+        if (*list->buff)
+        {
+            if (!(temp = ft_strchr(list->buff, '\n')))
+            {
+                out = ft_strjoin(out, list->buff);
+            }
+            else {
+                list->temp = ft_strdup(list->buff);
+                *temp = '\0';
+                temp++;
+                if (*temp) {
+                    if (!(list->buff = (char *)malloc(sizeof(list->buff) * BUFF_SIZE + 1)))
+                        return (-1);
+                    ft_strncpy(list->buff, temp, BUFF_SIZE);
+                }
+            }
+        }
+        read(list->fd, list->buff, BUFF_SIZE)
+    }
+}
+
+static t_gnl   *new_list_elem(int fd, char *buff, t_gnl *list)
+{
+    t_gnl *temp;
+
+    if (!list)
+    {
+        if (!(list = (t_gnl *)malloc(sizeof(list))))
+            return (NULL);
+    }
+    else
+    {
+        if (!(temp = (t_gnl *)malloc(sizeof(temp))))
+            return (NULL);
+        temp->next = list;
+        list = temp;
+    }
+    list->buff = buff;
+    list->temp = NULL;
+    list->fd = fd;
+    list->next = NULL;
+    return (list);
+}
 
 
 
 int		get_next_line(const int fd, char **line)
 {
-	static char	*buff;
-	char		*buff2;
-	char		*temp;
-	int			i;
-	int			read_bytes;
+	static t_gnl *open_files;
+	t_gnl *temp;
 
-	if (!buff)
-        if (!(buff = ft_strnew(BUFF_SIZE)))
-            return (-1);
-    if (**line != '\0')
+	if (!(*line) || fd < 0 || !BUFF_SIZE || (read(fd, NULL, 0) == -1))
+		return (-1);
+    if (!open_files)
     {
-        if (**line)
-            free(*line);
+        if (!(open_files = new_list_elem(fd, ft_strnew(BUFF_SIZE), open_files)))
+            return (-1);
     }
-    *line = ft_strnew(0);
-	while (1)
-	{
-		i = -1;
-        if (buff[i + 1])
+    else
+    {
+        temp = open_files;
+        while (temp)
         {
-            while (buff[++i])
-                if (buff[i] == '\n')
-                    break;
-			buff2 = ft_strnew(i);
-			ft_memcpy(buff2, buff, i);
-			temp = *line;
-			*line = ft_strjoin(*line, buff2);
-			free(buff2);
-			free(temp);
-		}
-		if (buff[i] == '\n') {
-			temp = buff;
-			while (*buff)
-				if (*buff++ == '\n')
-					break;
-			buff2 = ft_strnew(BUFF_SIZE);
-			ft_memcpy(buff2, buff, ft_strlen(buff));
-			free(temp);
-			buff = buff2;
-			return (1);
-		}
-		if (!(read_bytes = read(fd, buff, BUFF_SIZE)))
-			return (0);
-	}
-	return (-1);
+            if (temp->fd == fd)
+                return (read_line(temp, *line));
+            temp = temp->next;
+        }
+        if (!(open_files = new_list_elem(fd, ft_strnew(BUFF_SIZE), open_files)))
+            return (-1);
+    }
+    return (read_line(open_files, *line));
 }
-
-//int		main(int ac, char **av)
-//{
-//	int		i;
-//	char	*out;
-//	char	*begin;
-//	int		fd;
-//
-//	if (ac != 2)
-//		return (printf("usage:\t%s filename\n", av[0]));
-//	i = 0;
-//	out = (char *)malloc(1000);
-//	out[999] = '\0';
-//	begin = out;
-//	fd = open(av[1], O_RDONLY);
-//	while (get_next_line(fd, &out) > 0)
-//		printf("%s\n", out);
-//	//get_next_line(fd, &out);
-//	//printf("%s\n", begin);
-//	return (0);
-//}
 
 int		main(void)
 {
@@ -103,8 +114,6 @@ int		main(void)
  		printf("%s\n", out);
 	close(fd);
 	free(out);
-	//get_next_line(fd, &out);
-	//printf("%s\n", begin);
 	system("leaks -quiet gnl");
 	return (0);
 }

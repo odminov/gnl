@@ -99,6 +99,9 @@
 		<Unit filename="/Users/ahonchar/done/libft/ft_strchr.c">
 			<Option target="some"/>
 		</Unit>
+		<Unit filename="/Users/ahonchar/done/libft/ft_strdup.c">
+			<Option target="some"/>
+		</Unit>
 		<Unit filename="/Users/ahonchar/done/libft/ft_strjoin.c">
 			<Option target="some"/>
 		</Unit>

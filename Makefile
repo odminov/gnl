@@ -19,7 +19,7 @@ FLAGS = -Wextra -Wall -Werror
 	gcc $(FLAGS) -c $^
 
 All: $(OBJ)
-	gcc $(FLAGS) -o $(NAME) $(OBJ)  -L ~/done/libft/ -lft 
+	gcc $(FLAGS) -o $(NAME) $(OBJ)  -L ./libft/ -lft 
 clean:
 	rm -rf *.o
 	rm -rf *~

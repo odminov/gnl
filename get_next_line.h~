@@ -1,0 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ahonchar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/02/13 15:31:14 by ahonchar          #+#    #+#             */
+/*   Updated: 2018/02/13 15:40:26 by ahonchar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef GET_NEXT_LINE
+# define GET_NEXT_LINE
+
+typedef struct get_list
+{
+	char			*buff;
+	char			*out;
+	int				fd;
+	struct get_list	*next;
+}
+
+#endif

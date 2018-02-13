@@ -13,6 +13,8 @@ CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.o: /Users/ahonchar/don
 
 CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.o: /Users/ahonchar/done/libft/ft_strchr.c
 
+CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strdup.c.o: /Users/ahonchar/done/libft/ft_strdup.c
+
 CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o: /Users/ahonchar/done/libft/ft_strjoin.c
 CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o: /Users/ahonchar/done/libft/libft.h
 

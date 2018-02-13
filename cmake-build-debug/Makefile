@@ -258,6 +258,33 @@ Users/ahonchar/done/libft/ft_strchr.c.s:
 	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.s
 .PHONY : Users/ahonchar/done/libft/ft_strchr.c.s
 
+Users/ahonchar/done/libft/ft_strdup.o: Users/ahonchar/done/libft/ft_strdup.c.o
+
+.PHONY : Users/ahonchar/done/libft/ft_strdup.o
+
+# target to build an object file
+Users/ahonchar/done/libft/ft_strdup.c.o:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strdup.c.o
+.PHONY : Users/ahonchar/done/libft/ft_strdup.c.o
+
+Users/ahonchar/done/libft/ft_strdup.i: Users/ahonchar/done/libft/ft_strdup.c.i
+
+.PHONY : Users/ahonchar/done/libft/ft_strdup.i
+
+# target to preprocess a source file
+Users/ahonchar/done/libft/ft_strdup.c.i:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strdup.c.i
+.PHONY : Users/ahonchar/done/libft/ft_strdup.c.i
+
+Users/ahonchar/done/libft/ft_strdup.s: Users/ahonchar/done/libft/ft_strdup.c.s
+
+.PHONY : Users/ahonchar/done/libft/ft_strdup.s
+
+# target to generate assembly for a file
+Users/ahonchar/done/libft/ft_strdup.c.s:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strdup.c.s
+.PHONY : Users/ahonchar/done/libft/ft_strdup.c.s
+
 Users/ahonchar/done/libft/ft_strjoin.o: Users/ahonchar/done/libft/ft_strjoin.c.o
 
 .PHONY : Users/ahonchar/done/libft/ft_strjoin.o
@@ -390,6 +417,9 @@ help:
 	@echo "... Users/ahonchar/done/libft/ft_strchr.o"
 	@echo "... Users/ahonchar/done/libft/ft_strchr.i"
 	@echo "... Users/ahonchar/done/libft/ft_strchr.s"
+	@echo "... Users/ahonchar/done/libft/ft_strdup.o"
+	@echo "... Users/ahonchar/done/libft/ft_strdup.i"
+	@echo "... Users/ahonchar/done/libft/ft_strdup.s"
 	@echo "... Users/ahonchar/done/libft/ft_strjoin.o"
 	@echo "... Users/ahonchar/done/libft/ft_strjoin.i"
 	@echo "... Users/ahonchar/done/libft/ft_strjoin.s"

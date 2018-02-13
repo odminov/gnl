@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o"
   "CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o"
   "CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.o"
+  "CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strdup.c.o"
   "some.pdb"
   "some"
 )
