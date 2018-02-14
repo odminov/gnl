@@ -23,6 +23,7 @@ typedef struct		s_gnl
 	char			*buff;
 	char			*temp;
 	int				fd;
+	int				read_compleate;
 	struct s_gnl	*next;
 }					t_gnl;
 

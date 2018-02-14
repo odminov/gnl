@@ -17,34 +17,85 @@
 
 #define BUFF_SIZE 10
 
+static int read_from_buff(char *buff, char *out)
+{
+    char *nl;
+    char *before_nl;
+    char *temp;
+
+    temp = NULL;
+    if (!(nl = ft_strchr(buff, '\n')))
+    {
+        if (!(out = ft_strjoin(out, buff)))
+            return (-1);
+        return (0);
+    }
+    else {
+        *nl = '\0';
+        nl++;
+        if (!(before_nl = ft_strdup(buff)))
+            return (-1);
+        if (!(out = ft_strjoin(out, before_nl)))
+            return (-1);
+        if (*nl)
+        {
+            if (!(temp = (char *)malloc(sizeof(temp) * ft_strlen(nl) + 1)))
+                return (-1);
+            ft_strcpy(buff, nl);
+        }
+        free(buff);
+        buff = temp;
+        free(before_nl);
+    }
+    return (1);
+}
+
+// static del_list_elem(list)
+// {
+//     t_gnl *temp;
+
+//     temp = list;
+//     while 
+// }
+
 int		read_line(t_gnl *list, char *out)
 {
-    char    *temp;
     char    *temp_buf;
+    int     read_buff;
 
+    if (list->read_compleate)
+    {
+       // del_list_elem(list);
+        return (0);
+    }
     if (*out)
         free(out);
-    out = ft_strnew(0);
+    if (!(out = ft_strnew(0)))
+        return (-1);
     while (1)
     {
         if (*list->buff)
         {
-            if (!(temp = ft_strchr(list->buff, '\n')))
+            read_buff = read_from_buff(list->buff, out);
+            if (read_buff == 1)
+                return (1);
+            else if (read_buff == -1)
+                return (-1);
+            else
             {
-                out = ft_strjoin(out, list->buff);
-            }
-            else {
-                list->temp = ft_strdup(list->buff);
-                *temp = '\0';
-                temp++;
-                if (*temp) {
-                    if (!(list->buff = (char *)malloc(sizeof(list->buff) * BUFF_SIZE + 1)))
-                        return (-1);
-                    ft_strncpy(list->buff, temp, BUFF_SIZE);
-                }
+                temp_buf = list->buff;
+                list->buff = ft_strnew(BUFF_SIZE);
+                free(temp_buf);
             }
         }
-        read(list->fd, list->buff, BUFF_SIZE)
+        if ((read(list->fd, list->buff, BUFF_SIZE)) < BUFF_SIZE)
+        {
+            if (read_from_buff(list->buff, out) < 0)
+                return (-1);
+            list->read_compleate = 1;
+            return (1);
+        }
+
     }
 }
 
@@ -67,6 +118,7 @@ static t_gnl   *new_list_elem(int fd, char *buff, t_gnl *list)
     list->buff = buff;
     list->temp = NULL;
     list->fd = fd;
+    list->read_compleate = 0;
     list->next = NULL;
     return (list);
 }
@@ -107,7 +159,7 @@ int		main(void)
 	int		fd;
 
 	i = 0;
-	fd = open("/Users/ahonchar/test/file1", O_RDONLY);
+	fd = open("./file1", O_RDONLY);
 	if (fd < 3)
 		return (printf("invalid file, open = %d\n", fd));
 	while (get_next_line(fd, &out) > 0)
