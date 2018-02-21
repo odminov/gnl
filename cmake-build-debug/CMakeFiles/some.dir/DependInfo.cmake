@@ -9,9 +9,12 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ahonchar/done/libft/ft_memcpy.c" "/Users/ahonchar/test/cmake-build-debug/CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memcpy.c.o"
   "/Users/ahonchar/done/libft/ft_memset.c" "/Users/ahonchar/test/cmake-build-debug/CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_memset.c.o"
   "/Users/ahonchar/done/libft/ft_strchr.c" "/Users/ahonchar/test/cmake-build-debug/CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.o"
+  "/Users/ahonchar/done/libft/ft_strclr.c" "/Users/ahonchar/test/cmake-build-debug/CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strclr.c.o"
+  "/Users/ahonchar/done/libft/ft_strcpy.c" "/Users/ahonchar/test/cmake-build-debug/CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strcpy.c.o"
   "/Users/ahonchar/done/libft/ft_strdup.c" "/Users/ahonchar/test/cmake-build-debug/CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strdup.c.o"
   "/Users/ahonchar/done/libft/ft_strjoin.c" "/Users/ahonchar/test/cmake-build-debug/CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strjoin.c.o"
   "/Users/ahonchar/done/libft/ft_strlen.c" "/Users/ahonchar/test/cmake-build-debug/CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strlen.c.o"
+  "/Users/ahonchar/done/libft/ft_strncpy.c" "/Users/ahonchar/test/cmake-build-debug/CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strncpy.c.o"
   "/Users/ahonchar/done/libft/ft_strnew.c" "/Users/ahonchar/test/cmake-build-debug/CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o"
   "/Users/ahonchar/test/main.c" "/Users/ahonchar/test/cmake-build-debug/CMakeFiles/some.dir/main.c.o"
   )

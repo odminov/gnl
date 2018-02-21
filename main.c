@@ -15,37 +15,37 @@
 #include <fcntl.h>
 #include <stdio.h>
 
-#define BUFF_SIZE 10
+#define BUFF_SIZE 5
 
-static int read_from_buff(char *buff, char *out)
+static int read_from_buff(t_gnl *list, char **line)
 {
     char *nl;
-    char *before_nl;
     char *temp;
 
-    temp = NULL;
-    if (!(nl = ft_strchr(buff, '\n')))
+    temp = *line;
+    if (!(nl = ft_strchr(list->buff, '\n')))
     {
-        if (!(out = ft_strjoin(out, buff)))
+        if (!(*line = ft_strjoin(*line, list->buff)))
             return (-1);
+        free(temp);
         return (0);
     }
-    else {
+    else
+    {
         *nl = '\0';
         nl++;
-        if (!(before_nl = ft_strdup(buff)))
+        if (!(*line = ft_strjoin(*line, list->buff)))
             return (-1);
-        if (!(out = ft_strjoin(out, before_nl)))
-            return (-1);
+        free(temp);
+        temp = NULL;
         if (*nl)
         {
-            if (!(temp = (char *)malloc(sizeof(temp) * ft_strlen(nl) + 1)))
+            if (!(temp = (char *)malloc(sizeof(temp) * BUFF_SIZE + 1)))
                 return (-1);
-            ft_strcpy(buff, nl);
+            ft_strncpy(temp, nl, BUFF_SIZE);
+            free(list->buff);
+            list->buff = temp;
         }
-        free(buff);
-        buff = temp;
-        free(before_nl);
     }
     return (1);
 }
@@ -58,44 +58,33 @@ static int read_from_buff(char *buff, char *out)
 //     while 
 // }
 
-int		read_line(t_gnl *list, char *out)
+int     read_line(t_gnl *list, char **line)
 {
-    char    *temp_buf;
     int     read_buff;
 
     if (list->read_compleate)
-    {
-       // del_list_elem(list);
-        return (0);
-    }
-    if (*out)
-        free(out);
-    if (!(out = ft_strnew(0)))
+        return (list->read_compleate = 0);
+    if (*line && **line)
+        free(*line);
+    *line = NULL;
+    if (!(*line = ft_strnew(0)))
         return (-1);
     while (1)
     {
         if (*list->buff)
         {
-            read_buff = read_from_buff(list->buff, out);
-            if (read_buff == 1)
-                return (1);
-            else if (read_buff == -1)
-                return (-1);
-            else
-            {
-                temp_buf = list->buff;
-                list->buff = ft_strnew(BUFF_SIZE);
-                free(temp_buf);
-            }
-        }
-        if ((read(list->fd, list->buff, BUFF_SIZE)) < BUFF_SIZE)
+            read_buff = read_from_buff(list, line);
+            ft_strclr(list->buff);
+            if (read_buff != 0)
+                return (read_buff);
+        }        
+        if ((read(list->fd, list->buff, BUFF_SIZE)) == 0)
         {
-            if (read_from_buff(list->buff, out) < 0)
-                return (-1);
-            list->read_compleate = 1;
-            return (1);
+            // if (read_from_buff(list, line) < 0)
+            //     return (-1);
+            //list->read_compleate = 1;
+            return (0);
         }
-
     }
 }
 
@@ -123,15 +112,13 @@ static t_gnl   *new_list_elem(int fd, char *buff, t_gnl *list)
     return (list);
 }
 
-
-
-int		get_next_line(const int fd, char **line)
+int     get_next_line(const int fd, char **line)
 {
-	static t_gnl *open_files;
-	t_gnl *temp;
+    static t_gnl *open_files;
+    t_gnl *temp;
 
-	if (!(*line) || fd < 0 || !BUFF_SIZE || (read(fd, NULL, 0) == -1))
-		return (-1);
+    if (!line || fd < 0 || !BUFF_SIZE || (read(fd, NULL, 0) == -1))
+        return (-1);
     if (!open_files)
     {
         if (!(open_files = new_list_elem(fd, ft_strnew(BUFF_SIZE), open_files)))
@@ -143,29 +130,30 @@ int		get_next_line(const int fd, char **line)
         while (temp)
         {
             if (temp->fd == fd)
-                return (read_line(temp, *line));
+                return (read_line(temp, line));
             temp = temp->next;
         }
         if (!(open_files = new_list_elem(fd, ft_strnew(BUFF_SIZE), open_files)))
             return (-1);
     }
-    return (read_line(open_files, *line));
+    return (read_line(open_files, line));
 }
 
-int		main(void)
+int     main(void)
 {
-	int		i;
-	char	*out;
-	int		fd;
+    int     i;
+    char    *out;
+    int     fd;
 
-	i = 0;
-	fd = open("./file1", O_RDONLY);
-	if (fd < 3)
-		return (printf("invalid file, open = %d\n", fd));
-	while (get_next_line(fd, &out) > 0)
- 		printf("%s\n", out);
-	close(fd);
-	free(out);
-	system("leaks -quiet gnl");
-	return (0);
+    i = 0;
+    fd = open("/users/ahonchar/test/file1", O_RDONLY);
+    if (fd < 3)
+        return (printf("invalid file, open = %d\n", fd));
+    //printf("%d\n", get_next_line(fd, NULL));
+    while (get_next_line(fd, &out) > 0)
+        printf("%s\n", out);
+    close(fd);
+    free(out);
+    system("leaks -quiet gnl");
+    return (0);
 }

@@ -99,6 +99,12 @@
 		<Unit filename="/Users/ahonchar/done/libft/ft_strchr.c">
 			<Option target="some"/>
 		</Unit>
+		<Unit filename="/Users/ahonchar/done/libft/ft_strclr.c">
+			<Option target="some"/>
+		</Unit>
+		<Unit filename="/Users/ahonchar/done/libft/ft_strcpy.c">
+			<Option target="some"/>
+		</Unit>
 		<Unit filename="/Users/ahonchar/done/libft/ft_strdup.c">
 			<Option target="some"/>
 		</Unit>
@@ -106,6 +112,9 @@
 			<Option target="some"/>
 		</Unit>
 		<Unit filename="/Users/ahonchar/done/libft/ft_strlen.c">
+			<Option target="some"/>
+		</Unit>
+		<Unit filename="/Users/ahonchar/done/libft/ft_strncpy.c">
 			<Option target="some"/>
 		</Unit>
 		<Unit filename="/Users/ahonchar/done/libft/ft_strnew.c">

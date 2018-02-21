@@ -258,6 +258,60 @@ Users/ahonchar/done/libft/ft_strchr.c.s:
 	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strchr.c.s
 .PHONY : Users/ahonchar/done/libft/ft_strchr.c.s
 
+Users/ahonchar/done/libft/ft_strclr.o: Users/ahonchar/done/libft/ft_strclr.c.o
+
+.PHONY : Users/ahonchar/done/libft/ft_strclr.o
+
+# target to build an object file
+Users/ahonchar/done/libft/ft_strclr.c.o:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strclr.c.o
+.PHONY : Users/ahonchar/done/libft/ft_strclr.c.o
+
+Users/ahonchar/done/libft/ft_strclr.i: Users/ahonchar/done/libft/ft_strclr.c.i
+
+.PHONY : Users/ahonchar/done/libft/ft_strclr.i
+
+# target to preprocess a source file
+Users/ahonchar/done/libft/ft_strclr.c.i:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strclr.c.i
+.PHONY : Users/ahonchar/done/libft/ft_strclr.c.i
+
+Users/ahonchar/done/libft/ft_strclr.s: Users/ahonchar/done/libft/ft_strclr.c.s
+
+.PHONY : Users/ahonchar/done/libft/ft_strclr.s
+
+# target to generate assembly for a file
+Users/ahonchar/done/libft/ft_strclr.c.s:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strclr.c.s
+.PHONY : Users/ahonchar/done/libft/ft_strclr.c.s
+
+Users/ahonchar/done/libft/ft_strcpy.o: Users/ahonchar/done/libft/ft_strcpy.c.o
+
+.PHONY : Users/ahonchar/done/libft/ft_strcpy.o
+
+# target to build an object file
+Users/ahonchar/done/libft/ft_strcpy.c.o:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strcpy.c.o
+.PHONY : Users/ahonchar/done/libft/ft_strcpy.c.o
+
+Users/ahonchar/done/libft/ft_strcpy.i: Users/ahonchar/done/libft/ft_strcpy.c.i
+
+.PHONY : Users/ahonchar/done/libft/ft_strcpy.i
+
+# target to preprocess a source file
+Users/ahonchar/done/libft/ft_strcpy.c.i:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strcpy.c.i
+.PHONY : Users/ahonchar/done/libft/ft_strcpy.c.i
+
+Users/ahonchar/done/libft/ft_strcpy.s: Users/ahonchar/done/libft/ft_strcpy.c.s
+
+.PHONY : Users/ahonchar/done/libft/ft_strcpy.s
+
+# target to generate assembly for a file
+Users/ahonchar/done/libft/ft_strcpy.c.s:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strcpy.c.s
+.PHONY : Users/ahonchar/done/libft/ft_strcpy.c.s
+
 Users/ahonchar/done/libft/ft_strdup.o: Users/ahonchar/done/libft/ft_strdup.c.o
 
 .PHONY : Users/ahonchar/done/libft/ft_strdup.o
@@ -339,6 +393,33 @@ Users/ahonchar/done/libft/ft_strlen.c.s:
 	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strlen.c.s
 .PHONY : Users/ahonchar/done/libft/ft_strlen.c.s
 
+Users/ahonchar/done/libft/ft_strncpy.o: Users/ahonchar/done/libft/ft_strncpy.c.o
+
+.PHONY : Users/ahonchar/done/libft/ft_strncpy.o
+
+# target to build an object file
+Users/ahonchar/done/libft/ft_strncpy.c.o:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strncpy.c.o
+.PHONY : Users/ahonchar/done/libft/ft_strncpy.c.o
+
+Users/ahonchar/done/libft/ft_strncpy.i: Users/ahonchar/done/libft/ft_strncpy.c.i
+
+.PHONY : Users/ahonchar/done/libft/ft_strncpy.i
+
+# target to preprocess a source file
+Users/ahonchar/done/libft/ft_strncpy.c.i:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strncpy.c.i
+.PHONY : Users/ahonchar/done/libft/ft_strncpy.c.i
+
+Users/ahonchar/done/libft/ft_strncpy.s: Users/ahonchar/done/libft/ft_strncpy.c.s
+
+.PHONY : Users/ahonchar/done/libft/ft_strncpy.s
+
+# target to generate assembly for a file
+Users/ahonchar/done/libft/ft_strncpy.c.s:
+	$(MAKE) -f CMakeFiles/some.dir/build.make CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strncpy.c.s
+.PHONY : Users/ahonchar/done/libft/ft_strncpy.c.s
+
 Users/ahonchar/done/libft/ft_strnew.o: Users/ahonchar/done/libft/ft_strnew.c.o
 
 .PHONY : Users/ahonchar/done/libft/ft_strnew.o
@@ -417,6 +498,12 @@ help:
 	@echo "... Users/ahonchar/done/libft/ft_strchr.o"
 	@echo "... Users/ahonchar/done/libft/ft_strchr.i"
 	@echo "... Users/ahonchar/done/libft/ft_strchr.s"
+	@echo "... Users/ahonchar/done/libft/ft_strclr.o"
+	@echo "... Users/ahonchar/done/libft/ft_strclr.i"
+	@echo "... Users/ahonchar/done/libft/ft_strclr.s"
+	@echo "... Users/ahonchar/done/libft/ft_strcpy.o"
+	@echo "... Users/ahonchar/done/libft/ft_strcpy.i"
+	@echo "... Users/ahonchar/done/libft/ft_strcpy.s"
 	@echo "... Users/ahonchar/done/libft/ft_strdup.o"
 	@echo "... Users/ahonchar/done/libft/ft_strdup.i"
 	@echo "... Users/ahonchar/done/libft/ft_strdup.s"
@@ -426,6 +513,9 @@ help:
 	@echo "... Users/ahonchar/done/libft/ft_strlen.o"
 	@echo "... Users/ahonchar/done/libft/ft_strlen.i"
 	@echo "... Users/ahonchar/done/libft/ft_strlen.s"
+	@echo "... Users/ahonchar/done/libft/ft_strncpy.o"
+	@echo "... Users/ahonchar/done/libft/ft_strncpy.i"
+	@echo "... Users/ahonchar/done/libft/ft_strncpy.s"
 	@echo "... Users/ahonchar/done/libft/ft_strnew.o"
 	@echo "... Users/ahonchar/done/libft/ft_strnew.i"
 	@echo "... Users/ahonchar/done/libft/ft_strnew.s"

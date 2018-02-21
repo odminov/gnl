@@ -15,4 +15,7 @@ add_executable(some
         /Users/ahonchar/done/libft/ft_strjoin.c
         /Users/ahonchar/done/libft/ft_strnew.c
         /Users/ahonchar/done/libft/ft_memset.c
-        /Users/ahonchar/done/libft/ft_strdup.c)
+        /Users/ahonchar/done/libft/ft_strdup.c
+        /Users/ahonchar/done/libft/ft_strcpy.c
+        /Users/ahonchar/done/libft/ft_strncpy.c
+        /Users/ahonchar/done/libft/ft_strclr.c)
