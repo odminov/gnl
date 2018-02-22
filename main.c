@@ -15,9 +15,9 @@
 #include <fcntl.h>
 #include <stdio.h>
 
-#define BUFF_SIZE 10
+#define BUFF_SIZE 30
 
-static int read_from_buff(t_gnl *list, char **line)
+int read_from_buff(t_gnl *list, char **line)
 {
     char    *nl;
     char    *temp;
@@ -52,10 +52,8 @@ int     read_line(t_gnl *list, char **line)
 {
     int     read_buff;
 
-    // if (list->read_compleate)
-    // {
-    //     return (0);
-    // }
+    if (list->read_compleate)
+        return (list->read_compleate = 0);
     if (*line && **line)
         free(*line);
     *line = NULL;
@@ -66,19 +64,19 @@ int     read_line(t_gnl *list, char **line)
         if (*list->buff)
         {
             read_buff = read_from_buff(list, line);
-            ft_strclr(list->buff);
             if (read_buff == 1 || read_buff == -1)
                 return (read_buff);
+            ft_strclr(list->buff);
         }
         if ((read(list->fd, list->buff, BUFF_SIZE)) == 0)
         {
-            //list->read_compleate = 1;
-            return (0);
+            list->read_compleate = 1;
+            return (1);
         }
     }
 }
 
-static t_gnl   *new_list_elem(int fd, char *buff, t_gnl *list)
+t_gnl   *new_list_elem(int fd, char *buff, t_gnl *list)
 {
     t_gnl *temp;
 
@@ -109,7 +107,7 @@ int     get_next_line(const int fd, char **line)
     static t_gnl *open_files;
     t_gnl *temp;
 
-    if (!(*line) || fd < 0 || !BUFF_SIZE || (read(fd, NULL, 0) == -1))
+    if (!line || fd < 0 || !BUFF_SIZE || (read(fd, NULL, 0) == -1))
         return (-1);
     if (!open_files)
     {
@@ -119,12 +117,13 @@ int     get_next_line(const int fd, char **line)
     else
     {
         temp = open_files;
-        while (temp)
+        while (open_files)
         {
-            if (temp->fd == fd)
-                return (read_line(temp, line));
-            temp = temp->next;
+            if (open_files->fd == fd)
+                return (read_line(open_files, line));
+            open_files = open_files->next;
         }
+        open_files = temp;
         if (!(open_files = new_list_elem(fd, ft_strnew(BUFF_SIZE), open_files)))
             return (-1);
     }
@@ -138,7 +137,7 @@ int     main(void)
     int     fd;
 
     i = 0;
-    fd = open("./file1", O_RDONLY);
+    fd = open("/users/ahonchar/test/file1", O_RDONLY);
     if (fd < 3)
         return (printf("invalid file, open = %d\n", fd));
     while (get_next_line(fd, &out) > 0)
