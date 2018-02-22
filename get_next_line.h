@@ -16,6 +16,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+# define BUFF_SIZE 16
+
 int					get_next_line(int fd, char **line);
 
 typedef struct		s_gnl

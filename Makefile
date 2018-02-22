@@ -6,13 +6,13 @@
 #    By: ahonchar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/01/25 18:29:03 by ahonchar          #+#    #+#              #
-#    Updated: 2018/01/25 18:33:15 by ahonchar         ###   ########.fr        #
+#    Updated: 2018/02/22 15:47:15 by ahonchar         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
 NAME = gnl
-SRC = main.c
-OBJ = main.o
+SRC = main.c get_next_line.c
+OBJ = main.o get_next_line.o
 FLAGS = -Wextra -Wall -Werror
 
 %.o:%.c
