@@ -31,7 +31,10 @@ CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strncpy.c.o
 CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o
  /Users/ahonchar/done/libft/ft_strnew.c
  /Users/ahonchar/done/libft/libft.h
-CMakeFiles/some.dir/main.c.o
+CMakeFiles/some.dir/get_next_line.c.o
  /Users/ahonchar/test/./libft/libft.h
+ /Users/ahonchar/test/get_next_line.c
+ /Users/ahonchar/test/get_next_line.h
+CMakeFiles/some.dir/main.c.o
  /Users/ahonchar/test/get_next_line.h
  /Users/ahonchar/test/main.c

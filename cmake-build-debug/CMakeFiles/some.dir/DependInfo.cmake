@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ahonchar/done/libft/ft_strlen.c" "/Users/ahonchar/test/cmake-build-debug/CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strlen.c.o"
   "/Users/ahonchar/done/libft/ft_strncpy.c" "/Users/ahonchar/test/cmake-build-debug/CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strncpy.c.o"
   "/Users/ahonchar/done/libft/ft_strnew.c" "/Users/ahonchar/test/cmake-build-debug/CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strnew.c.o"
+  "/Users/ahonchar/test/get_next_line.c" "/Users/ahonchar/test/cmake-build-debug/CMakeFiles/some.dir/get_next_line.c.o"
   "/Users/ahonchar/test/main.c" "/Users/ahonchar/test/cmake-build-debug/CMakeFiles/some.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")

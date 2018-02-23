@@ -12,6 +12,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strcpy.c.o"
   "CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strncpy.c.o"
   "CMakeFiles/some.dir/Users/ahonchar/done/libft/ft_strclr.c.o"
+  "CMakeFiles/some.dir/get_next_line.c.o"
   "some.pdb"
   "some"
 )

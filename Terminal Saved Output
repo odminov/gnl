@@ -1,0 +1,446 @@
+Last login: Fri Feb 23 12:11:30 on console
+e1r4p14% cd test 
+e1r4p14% ls
+CMakeLists.txt		author			get_next_line.c		gnl			main.o
+Makefile		cmake-build-debug	get_next_line.h		libft			point.c
+README.md		file1			get_next_line.o		main.c			test
+e1r4p14% make
+gcc -Wextra -Wall -Werror -c get_next_line.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+1.hsdg asdhias asidhj asdo asjdo as\
+ndsfk bf fdlbj dlb dfb df\
+hsjkbn dlfbnkd flbkndf.\
+vsnovknsfdkv lfnbdf bpdfn pb.1
+. iosad\
+
+
+Process 45630: 196 nodes malloced for 23 KB
+Process 45630: 12 leaks for 368 total leaked bytes.
+Leak: 0x7ff541500000  size=32  zone: DefaultMallocZone_0x10e001000  length: 11  "2.aslfdlsbv"
+Leak: 0x7ff541500020  size=32  zone: DefaultMallocZone_0x10e001000  length: 26  "ndsfk bf fdlbj dlb dfb df\"
+Leak: 0x7ff541500040  size=16  zone: DefaultMallocZone_0x10e001000  length: 8  ". iosad\"
+Leak: 0x7ff541500050  size=48  zone: DefaultMallocZone_0x10e001000  length: 36  "1.hsdg asdhias asidhj asdo asjdo as\"
+Leak: 0x7ff5415000b0  size=32  zone: DefaultMallocZone_0x10e001000  length: 5  "3. fb"
+Leak: 0x7ff5415000d0  size=32  zone: DefaultMallocZone_0x10e001000  length: 7  "4. dsoi"
+Leak: 0x7ff5415000f0  size=32  zone: DefaultMallocZone_0x10e001000  length: 24  "hsjkbn dlfbnkd flbkndf.\"
+Leak: 0x7ff541500110  size=32  zone: DefaultMallocZone_0x10e001000
+	0x00000035 0x00000000 0x00000000 0x00000000 	5...............
+	0x00000000 0x00000000 0x00000000 0x00000000 	................
+Leak: 0x7ff541500130  size=32  zone: DefaultMallocZone_0x10e001000  length: 30  "vsnovknsfdkv lfnbdf bpdfn pb.1"
+Leak: 0x7ff541500150  size=32  zone: DefaultMallocZone_0x10e001000  length: 7  "6. asd\"
+Leak: 0x7ff541500170  size=16  zone: DefaultMallocZone_0x10e001000
+	0x00000000 0x00000000 0x00000000 0x00000000 	................
+Leak: 0x7ff541500180  size=32  zone: DefaultMallocZone_0x10e001000  length: 13  "7. asknpasdf\"
+e1r4p14% make
+gcc -Wextra -Wall -Werror -c main.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+1.hsdg asdhias asidhj asdo asjdo as\
+ndsfk bf fdlbj dlb dfb df\
+hsjkbn dlfbnkd flbkndf.\
+vsnovknsfdkv lfnbdf bpdfn pb.1
+. iosad\
+
+
+gnl(45651,0x7fff727e4000) malloc: *** error for object 0x7fd7e8400020: pointer being freed was not allocated
+*** set a breakpoint in malloc_error_break to debug
+zsh: abort      ./gnl
+e1r4p14% make
+gcc -Wextra -Wall -Werror -c get_next_line.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+1.hsdg asdhias asidhj asdo asjdo as\
+1.hsdg asdhias asidhj asdo asjdo as\ndsfk bf fdlbj dlb dfb df\
+1.hsdg asdhias asidhj asdo asjdo as\ndsfk bf fdlbj dlb dfb df\hsjkbn dlfbnkd flbkndf.\
+1.hsdg asdhias asidhj asdo asjdo as\ndsfk bf fdlbj dlb dfb df\hsjkbn dlfbnkd flbkndf.\vsnovknsfdkv lfnbdf bpdfn pb.1
+1.hsdg asdhias asidhj asdo asjdo as\ndsfk bf fdlbj dlb dfb df\hsjkbn dlfbnkd flbkndf.\vsnovknsfdkv lfnbdf bpdfn pb.1. iosad\
+1.hsdg asdhias asidhj asdo asjdo as\ndsfk bf fdlbj dlb dfb df\hsjkbn dlfbnkd flbkndf.\vsnovknsfdkv lfnbdf bpdfn pb.1. iosad\
+
+gnl(45743,0x7fff727e4000) malloc: *** error for object 0x7febf8c03490: pointer being freed was not allocated
+*** set a breakpoint in malloc_error_break to debug
+zsh: abort      ./gnl
+e1r4p14% make 
+gcc -Wextra -Wall -Werror -c get_next_line.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+gnl(45800,0x7fff727e4000) malloc: *** error for object 0x7fff5902bba8: pointer being freed was not allocated
+*** set a breakpoint in malloc_error_break to debug
+zsh: abort      ./gnl
+e1r4p14% make
+gcc -Wextra -Wall -Werror -c get_next_line.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+1.hsdg asdhias asidhj asdo asjdo as\
+ndsfk bf fdlbj dlb dfb df\
+hsjkbn dlfbnkd flbkndf.\
+vsnovknsfdkv lfnbdf bpdfn pb.1
+. iosad\
+
+
+gnl(45815,0x7fff727e4000) malloc: *** error for object 0x7fb81ac00020: pointer being freed was not allocated
+*** set a breakpoint in malloc_error_break to debug
+zsh: abort      ./gnl
+e1r4p14% make
+gcc -Wextra -Wall -Werror -c get_next_line.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+1.hsdg asdhias asidhj asdo asjdo as\
+ndsfk bf fdlbj dlb dfb df\
+hsjkbn dlfbnkd flbkndf.\
+vsnovknsfdkv lfnbdf bpdfn pb.1
+. iosad\
+
+
+gnl(45874,0x7fff727e4000) malloc: *** error for object 0x7fd048d00070: pointer being freed was not allocated
+*** set a breakpoint in malloc_error_break to debug
+zsh: abort      ./gnl
+e1r4p14% make
+gcc -Wextra -Wall -Werror -c get_next_line.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+1.hsdg asdhias asidhj asdo asjdo as\
+2.aslfdlsbvndsfk bf fdlbj dlb dfb df\
+3. fbhsjkbn dlfbnkd flbkndf.\
+4. dsoivsnovknsfdkv lfnbdf bpdfn pb.1
+5. iosad\
+6. asd\
+7. asknpasdf\
+gnl(45889,0x7fff727e4000) malloc: *** error for object 0x7fb9c1403210: pointer being freed was not allocated
+*** set a breakpoint in malloc_error_break to debug
+zsh: abort      ./gnl
+e1r4p14% make
+gcc -Wextra -Wall -Werror -c get_next_line.c
+get_next_line.c:67:21: error: implicit declaration of function 'my_exit' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+            return (my_exit(list, 1));
+                    ^
+get_next_line.c:67:21: note: did you mean '_exit'?
+/usr/include/unistd.h:429:7: note: '_exit' declared here
+void     _exit(int) __dead2;
+         ^
+1 error generated.
+make: *** [get_next_line.o] Error 1
+e1r4p14% ./gnl make
+1.hsdg asdhias asidhj asdo asjdo as\
+2.aslfdlsbvndsfk bf fdlbj dlb dfb df\
+3. fbhsjkbn dlfbnkd flbkndf.\
+4. dsoivsnovknsfdkv lfnbdf bpdfn pb.1
+5. iosad\
+6. asd\
+7. asknpasdf\
+gnl(45930,0x7fff727e4000) malloc: *** error for object 0x7fbda9403210: pointer being freed was not allocated
+*** set a breakpoint in malloc_error_break to debug
+zsh: abort      ./gnl make
+e1r4p14% make  
+gcc -Wextra -Wall -Werror -c get_next_line.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+1.hsdg asdhias asidhj asdo asjdo as\
+2.aslfdlsbvndsfk bf fdlbj dlb dfb df\
+3. fbhsjkbn dlfbnkd flbkndf.\
+4. dsoivsnovknsfdkv lfnbdf bpdfn pb.1
+5. iosad\
+6. asd\
+7. asknpasdf\
+gnl(45942,0x7fff727e4000) malloc: *** error for object 0x7fa96b403210: pointer being freed was not allocated
+*** set a breakpoint in malloc_error_break to debug
+zsh: abort      ./gnl
+e1r4p14% make
+gcc -Wextra -Wall -Werror -c main.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+1.hsdg asdhias asidhj asdo asjdo as\
+2.aslfdlsbvndsfk bf fdlbj dlb dfb df\
+3. fbhsjkbn dlfbnkd flbkndf.\
+4. dsoivsnovknsfdkv lfnbdf bpdfn pb.1
+5. iosad\
+6. asd\
+7. asknpasdf\
+Process 46002: 185 nodes malloced for 23 KB
+Process 46002: 0 leaks for 0 total leaked bytes.
+e1r4p14% make
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+1.hsdg asdhias asidhj asdo asjdo as\
+2.aslfdlsbvndsfk bf fdlbj dlb dfb df\
+3. fbhsjkbn dlfbnkd flbkndf.\
+4. dsoivsnovknsfdkv lfnbdf bpdfn pb.1
+5. iosad\
+6. asd\
+7. asknpasdf\
+Process 46020: 185 nodes malloced for 23 KB
+Process 46020: 0 leaks for 0 total leaked bytes.
+e1r4p14% make
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+1.hsdg asdhias asidhj asdo asjdo as\
+2.aslfdlsbvndsfk bf fdlbj dlb dfb df\
+3. fbhsjkbn dlfbnkd flbkndf.\
+4. dsoivsnovknsfdkv lfnbdf bpdfn pb.1
+5. iosad\
+6. asd\
+7. asknpasdf\
+Process 46036: 185 nodes malloced for 23 KB
+Process 46036: 0 leaks for 0 total leaked bytes.
+e1r4p14% pwd
+/Users/ahonchar/test
+e1r4p14% cp get_* ~/gnl 
+e1r4p14% cp main.c ~/gnl
+e1r4p14% cd 
+e1r4p14% cd gnl 
+e1r4p14% ls 
+author			get_next_line.h		get_next_line.o		main.c
+get_next_line.c		get_next_line.h~	libft
+e1r4p14% rm get_next_line.o
+e1r4p14% rm get_next_line.h~
+e1r4p14% ls                 
+author		get_next_line.c	get_next_line.h	libft		main.c
+e1r4p14% rm main.c 
+e1r4p14% ls
+author		get_next_line.c	get_next_line.h	libft
+e1r4p14% cd
+e1r4p14% cd checkers 
+e1r4p14% cd 42FileChecker 
+e1r4p14% ls
+42FileChecker.sh	assets			libft-unit-test		srcs
+LICENCE			fillit_checker		maintest		tmp
+README.md		includes		moulitest_42projects
+e1r4p14% sh 42FileChecker.sh 
+e1r4p14% sh 42FileChecker.sh
+e1r4p14% cd\
+> c
+zsh: command not found: cdc
+e1r4p14% cd
+e1r4p14% cd test
+e1r4p14% emcas file1 
+zsh: command not found: emcas
+e1r4p14% emacs file1 
+
+zsh: suspended  emacs file1
+e1r4p14% emacs file2
+
+zsh: suspended  emacs file2
+e1r4p14% make 
+gcc -Wextra -Wall -Werror -c main.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+asd
+Process 49683: 185 nodes malloced for 23 KB
+Process 49683: 0 leaks for 0 total leaked bytes.
+e1r4p14% emacs file3
+
+zsh: suspended  emacs file3
+e1r4p14% emacs file2
+
+zsh: suspended  emacs file2
+e1r4p14% emacs file3
+
+zsh: suspended  emacs file3
+e1r4p14% ./gnl 
+asd file2
+second line file2
+Process 49882: 185 nodes malloced for 23 KB
+Process 49882: 0 leaks for 0 total leaked bytes.
+e1r4p14% make
+gcc -Wextra -Wall -Werror -c main.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+^Z
+zsh: suspended  ./gnl
+e1r4p14% fg
+[6]    continued  ./gnl
+^C
+e1r4p14% ls
+CMakeLists.txt		cmake-build-debug	file3			gnl			point.c
+Makefile		file1			get_next_line.c		libft			test
+README.md		file2			get_next_line.h		main.c
+author			file2~			get_next_line.o		main.o
+e1r4p14% make
+gcc -Wextra -Wall -Werror -c main.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+1.hsdg asdhias asidhj asdo asjdo as\
+2.aslfdlsbvndsfk bf fdlbj dlb dfb df\
+3. fbhsjkbn dlfbnkd flbkndf.\
+4. dsoivsnovknsfdkv lfnbdf bpdfn pb.1
+5. iosad\
+6. asd\
+Process 50543: 185 nodes malloced for 23 KB
+Process 50543: 0 leaks for 0 total leaked bytes.
+e1r4p14% pwd
+/Users/ahonchar/test
+e1r4p14% make 
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+r%                                                                                                                                           e1r4p14% make re
+rm -rf *.o
+rm -rf *~
+rm -rf gnl
+gcc -Wextra -Wall -Werror -c main.c
+gcc -Wextra -Wall -Werror -c get_next_line.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+1.hsdg asdhias asidhj asdo asjdo as\
+2.aslfdlsbvndsfk bf fdlbj dlb dfb df\
+3. fbhsjkbn dlfbnkd flbkndf.\
+4. dsoivsnovknsfdkv lfnbdf bpdfn pb.1
+5. iosad\
+6. asd\
+Process 50583: 185 nodes malloced for 23 KB
+Process 50583: 0 leaks for 0 total leaked bytes.
+e1r4p14% emcas main.
+zsh: command not found: emcas
+e1r4p14% emcas main.c
+zsh: command not found: emcas
+e1r4p14% emacs main.c
+
+zsh: suspended  emacs main.c
+e1r4p14% make re
+rm -rf *.o
+rm -rf *~
+rm -rf gnl
+gcc -Wextra -Wall -Werror -c main.c
+gcc -Wextra -Wall -Werror -c get_next_line.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+1.hsdg asdhias asidhj asdo asjdo as\
+asd file2
+^C
+e1r4p14% make re
+rm -rf *.o
+rm -rf *~
+rm -rf gnl
+gcc -Wextra -Wall -Werror -c main.c
+gcc -Wextra -Wall -Werror -c get_next_line.c
+get_next_line.c:88:10: error: member reference base type 't_gnl *' (aka 'struct s_gnl *') is not a structure or union
+    *list->buff = NULL;
+     ~~~~^ ~~~~
+get_next_line.c:89:10: error: member reference base type 't_gnl *' (aka 'struct s_gnl *') is not a structure or union
+    *list->temp = NULL;
+     ~~~~^ ~~~~
+get_next_line.c:90:10: error: member reference base type 't_gnl *' (aka 'struct s_gnl *') is not a structure or union
+    *list->fd = fd;
+     ~~~~^ ~~
+get_next_line.c:91:10: error: member reference base type 't_gnl *' (aka 'struct s_gnl *') is not a structure or union
+    *list->read_compleate = 0;
+     ~~~~^ ~~~~~~~~~~~~~~
+get_next_line.c:92:10: error: member reference base type 't_gnl *' (aka 'struct s_gnl *') is not a structure or union
+    *list->next = NULL;
+     ~~~~^ ~~~~
+5 errors generated.
+make: *** [get_next_line.o] Error 1
+e1r4p14% make
+gcc -Wextra -Wall -Werror -c get_next_line.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% make re
+rm -rf *.o
+rm -rf *~
+rm -rf gnl
+gcc -Wextra -Wall -Werror -c main.c
+gcc -Wextra -Wall -Werror -c get_next_line.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+1.hsdg asdhias asidhj asdo asjdo as\
+asd file2
+^C
+e1r4p14% make
+gcc -Wextra -Wall -Werror -c get_next_line.c
+get_next_line.c:93:12: error: returning 't_gnl' (aka 'struct s_gnl') from a function with incompatible result type 't_gnl *'
+      (aka 'struct s_gnl *'); take the address with &
+    return (*list);
+           ^~~~~~~
+           &
+1 error generated.
+make: *** [get_next_line.o] Error 1
+e1r4p14% maek
+zsh: command not found: maek
+e1r4p14% make
+gcc -Wextra -Wall -Werror -c get_next_line.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+1.hsdg asdhias asidhj asdo asjdo as\
+asd file2
+^C
+e1r4p14% make re
+rm -rf *.o
+rm -rf *~
+rm -rf gnl
+gcc -Wextra -Wall -Werror -c main.c
+gcc -Wextra -Wall -Werror -c get_next_line.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+1.hsdg asdhias asidhj asdo asjdo as\
+asd file2
+^C
+e1r4p14% make re
+rm -rf *.o
+rm -rf *~
+rm -rf gnl
+gcc -Wextra -Wall -Werror -c main.c
+gcc -Wextra -Wall -Werror -c get_next_line.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+1.hsdg asdhias asidhj asdo asjdo as\
+asd file2
+^C
+e1r4p14% make re
+rm -rf *.o
+rm -rf *~
+rm -rf gnl
+gcc -Wextra -Wall -Werror -c main.c
+gcc -Wextra -Wall -Werror -c get_next_line.c
+get_next_line.c:58:17: error: use of undeclared identifier 'read_compleate'
+        return (read_compleate = 0);
+                ^
+1 error generated.
+make: *** [get_next_line.o] Error 1
+e1r4p14% make re
+rm -rf *.o
+rm -rf *~
+rm -rf gnl
+gcc -Wextra -Wall -Werror -c main.c
+gcc -Wextra -Wall -Werror -c get_next_line.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+1.hsdg asdhias asidhj asdo asjdo as\
+asd file2
+^C
+e1r4p14% make re
+rm -rf *.o
+rm -rf *~
+rm -rf gnl
+gcc -Wextra -Wall -Werror -c main.c
+gcc -Wextra -Wall -Werror -c get_next_line.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+1.hsdg asdhias asidhj asdo asjdo as\
+asd file2
+^C
+e1r4p14% make re
+rm -rf *.o
+rm -rf *~
+rm -rf gnl
+gcc -Wextra -Wall -Werror -c main.c
+gcc -Wextra -Wall -Werror -c get_next_line.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+1.hsdg asdhias asidhj asdo asjdo as\
+asd file2
+^C
+e1r4p14% make re
+rm -rf *.o
+rm -rf *~
+rm -rf gnl
+gcc -Wextra -Wall -Werror -c main.c
+gcc -Wextra -Wall -Werror -c get_next_line.c
+gcc -Wextra -Wall -Werror -o gnl main.o get_next_line.o  -L ./libft/ -lft 
+e1r4p14% ./gnl 
+1.hsdg asdhias asidhj asdo asjdo as\
+asd file2
+Process 51227: 187 nodes malloced for 23 KB
+Process 51227: 1 leak for 64 total leaked bytes.
+Leak: 0x7fef83403090  size=64  zone: DefaultMallocZone_0x108386000
+	0x00000000 0x00000000 0x83401a30 0x00007fef 	........0.@.....
+	0x00000000 0x00000000 0x00000000 0x00000000 	................
+	0x00000000 0x00000000 0x00000000 0x00000000 	................
+	0x00000000 0x00000000 0x00000000 0x00000000 	................
+e1r4p14% 

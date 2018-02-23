@@ -8,17 +8,103 @@ int     main(void)
     int     i;
     char    *out;
     int     fd;
+    int     fd2;
+    int     fd3;
 
     i = 0;
     fd = open("/users/ahonchar/test/file1", O_RDONLY);
+    fd2 = open("/users/ahonchar/test/file2", O_RDONLY);
+    fd3 = open("/users/ahonchar/test/file3", O_RDONLY);
     if (fd < 3)
         return (printf("invalid file, open = %d\n", fd));
-    while (get_next_line(fd, &out) > 0)
+    while ((i = get_next_line(fd2, &out)))
     {
+        if (!i)
+            break;
         printf("%s\n", out);
+        printf("%d\n", i);
+        free(out);
     }
+    printf("%d\n", i);
+    // if ((i = get_next_line(fd, &out)) > 0)
+    // {
+    //     printf("%s\n", out);
+    //     free(out);
+    // }
+    // //printf("%d\n", i);
+    // if (get_next_line(fd2, &out) == 1)
+    // {
+    //     printf("%s\n", out);
+    //     free(out);
+    // }
+    // if (get_next_line(fd3, &out) == 1)
+    // {
+    //     printf("%s\n", out);
+    //     free(out);
+    // }
+    // if (get_next_line(fd, &out) == 1)
+    // {
+    //     printf("%s\n", out);
+    //     free(out);
+    // }
+    // if (get_next_line(fd2, &out) == 1)
+    // {
+    //     printf("%s\n", out);
+    //     free(out);
+    // }
+    // if (get_next_line(fd3, &out) == 1)
+    // {
+    //     printf("%s\n", out);
+    //     free(out);
+    // }
+    // if (get_next_line(fd, &out) == 1)
+    // {
+    //     printf("%s\n", out);
+    //     free(out);
+    // }
+    // if (get_next_line(fd2, &out) == 1)
+    // {
+    //     printf("%s\n", out);
+    //     free(out);
+    // }
+    // if (get_next_line(fd3, &out) == 1)
+    // {
+    //     printf("%s\n", out);
+    //     free(out);
+    // }
+    // if (get_next_line(fd, &out) == 1)
+    // {
+    //     printf("%s\n", out);
+    //     free(out);
+    // }
+    // if (get_next_line(fd2, &out) == 1)
+    // {
+    //     printf("%s\n", out);
+    //     free(out);
+    // }
+    // if (get_next_line(fd3, &out) == 1)
+    // {
+    //     printf("%s\n", out);
+    //     free(out);
+    // }
+    //  if (get_next_line(fd, &out) == 1)
+    // {
+    //     printf("%s\n", out);
+    //     free(out);
+    // }
+    // if (get_next_line(fd2, &out) == 1)
+    // {
+    //     printf("%s\n", out);
+    //     free(out);
+    // }
+    // if (get_next_line(fd3, &out) == 1)
+    // {
+    //     printf("%s\n", out);
+    //     free(out);
+    // }
+    close(fd3);
+    close(fd2);
     close(fd);
-    free(out);
     system("leaks -quiet gnl");
     return (0);
 }

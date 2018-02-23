@@ -18,4 +18,5 @@ add_executable(some
         /Users/ahonchar/done/libft/ft_strdup.c
         /Users/ahonchar/done/libft/ft_strcpy.c
         /Users/ahonchar/done/libft/ft_strncpy.c
-        /Users/ahonchar/done/libft/ft_strclr.c)
+        /Users/ahonchar/done/libft/ft_strclr.c
+        /Users/ahonchar/test/get_next_line.c)

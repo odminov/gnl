@@ -12,21 +12,21 @@
 #include "get_next_line.h"
 #include "./libft/libft.h"
 
-static int  my_exit(t_gnl *list, int ret)
-{
-    if (list->buff)
-        free(list->buff);
-    return (ret);
-}
+// static int my_exit(t_gnl *list, int ret)
+// {
+//     if (list->buff)
+//         free(list->buff);
+//     list->buff = NULL;
+//     list->read_compleate = 0;
+//     return (ret);
+// }
 
 static int read_from_buff(t_gnl *list, char **line)
 {
     char    *nl;
     char    *temp;
-    char    *temp2;
 
     temp = *line;
-    //temp = NULL;
     if (!(nl = ft_strchr(list->buff, '\n')))
     {
         if (!(*line = ft_strjoin(*line, list->buff)))
@@ -41,11 +41,11 @@ static int read_from_buff(t_gnl *list, char **line)
         if (!(*line = ft_strjoin(*line, list->buff)))
             return (-1);
         free(temp);
-        if (!(temp2 = ft_strnew(BUFF_SIZE)))
+        if (!(temp = ft_strnew(BUFF_SIZE)))
             return (-1);
-        ft_strncpy(temp2, nl, BUFF_SIZE);
+        ft_strncpy(temp, nl, BUFF_SIZE);
         free(list->buff);
-        list->buff = temp2;
+        list->buff = temp;
     }
     return (1);
 }
@@ -55,14 +55,12 @@ static int     read_line(t_gnl *list, char **line)
     int     read_buff;
 
     if (list->read_compleate)
-        return (list->read_compleate = 0);
-    if (!(list->buff = ft_strnew(BUFF_SIZE)))
-        return (-1);
-    if (*line && **line)
-        free(*line);
-    *line = NULL;
+        return (0);
+    if (!list->buff)
+        if (!(list->buff = ft_strnew(BUFF_SIZE)))
+            return (-1);
     if (!(*line = ft_strnew(0)))
-        return (my_exit(list, -1));
+        return (-1);
     while (1)
     {
         if (*list->buff)
@@ -71,40 +69,27 @@ static int     read_line(t_gnl *list, char **line)
             if (read_buff == 1 || read_buff == -1)
                 return (read_buff);
             ft_strclr(list->buff);
-        }
+        }     
         if ((read(list->fd, list->buff, BUFF_SIZE)) == 0)
         {
+            if (!*(list->buff))
+                return (0);
             list->read_compleate = 1;
-            return (my_exit(list, 1));
+            return (1);            
         }
     }
 }
 
 static t_gnl   *new_list_elem(int fd, t_gnl *list)
 {
-    t_gnl *temp;
-
-    if (!list)
-    {
-        if (!(list = (t_gnl *)malloc(sizeof(list))))
-            return (NULL);
-    }
-    else
-    {
-        if (!(temp = (t_gnl *)malloc(sizeof(temp))))
-            return (NULL);
-        temp->next = list;
-        list = temp;
-    }
+    if (!(list = (t_gnl *)malloc(sizeof(list))))
+        return (NULL);
+    list->next = NULL;
     list->buff = NULL;
-    list->temp = NULL;
     list->fd = fd;
     list->read_compleate = 0;
-    list->next = NULL;
     return (list);
 }
-
-
 
 int     get_next_line(const int fd, char **line)
 {
@@ -117,19 +102,19 @@ int     get_next_line(const int fd, char **line)
     {
         if (!(open_files = new_list_elem(fd, open_files)))
             return (-1);
+        temp = open_files;
     }
     else
     {
         temp = open_files;
-        while (open_files)
+        while (temp->next && temp->fd != fd)
+            temp = temp->next;
+        if (temp->fd != fd)
         {
-            if (open_files->fd == fd)
-                return (read_line(open_files, line));
-            open_files = open_files->next;
+            if (!(temp->next = new_list_elem(fd, temp)))
+                return (-1);
+            temp = temp->next;
         }
-        open_files = temp;
-        if (!(open_files = new_list_elem(fd, open_files)))
-            return (-1);
     }
-    return (read_line(open_files, line));
+    return (read_line(temp, line));
 }

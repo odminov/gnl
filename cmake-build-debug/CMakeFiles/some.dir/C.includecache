@@ -68,6 +68,12 @@ string.h
 string.h
 -
 
+/Users/ahonchar/test/get_next_line.c
+get_next_line.h
+/Users/ahonchar/test/get_next_line.h
+./libft/libft.h
+/Users/ahonchar/test/./libft/libft.h
+
 /Users/ahonchar/test/get_next_line.h
 unistd.h
 -
@@ -75,12 +81,10 @@ stdlib.h
 -
 
 /Users/ahonchar/test/main.c
-get_next_line.h
-/Users/ahonchar/test/get_next_line.h
-./libft/libft.h
-/Users/ahonchar/test/./libft/libft.h
 fcntl.h
 -
 stdio.h
 -
+get_next_line.h
+/Users/ahonchar/test/get_next_line.h
 

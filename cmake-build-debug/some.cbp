@@ -120,6 +120,12 @@
 		<Unit filename="/Users/ahonchar/done/libft/ft_strnew.c">
 			<Option target="some"/>
 		</Unit>
+		<Unit filename="/Users/ahonchar/test/get_next_line.c">
+			<Option target="some"/>
+		</Unit>
+		<Unit filename="/Users/ahonchar/test/get_next_line.h">
+			<Option target="some"/>
+		</Unit>
 		<Unit filename="/Users/ahonchar/test/main.c">
 			<Option target="some"/>
 		</Unit>
