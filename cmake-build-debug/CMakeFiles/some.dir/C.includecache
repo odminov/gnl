@@ -73,6 +73,8 @@ get_next_line.h
 /Users/ahonchar/test/get_next_line.h
 ./libft/libft.h
 /Users/ahonchar/test/./libft/libft.h
+stdio.h
+-
 
 /Users/ahonchar/test/get_next_line.h
 unistd.h
