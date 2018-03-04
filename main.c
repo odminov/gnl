@@ -12,9 +12,9 @@ int     main(void)
     int     fd3;
 
     i = 0;
-    fd = open("/users/ahonchar/test/file1", O_RDONLY);
-    fd2 = open("/users/ahonchar/test/file2", O_RDONLY);
-    fd3 = open("/users/ahonchar/test/file3", O_RDONLY);
+    fd = open("/users/ahonchar/test1/file1", O_RDONLY);
+    fd2 = open("/users/ahonchar/test1/file2", O_RDONLY);
+    fd3 = open("/users/ahonchar/test1/file3", O_RDONLY);
     if (fd < 3)
         return (printf("invalid file, open = %d\n", fd));
     while ((i = get_next_line(fd2, &out)) > 0)
@@ -38,11 +38,13 @@ int     main(void)
         free(out);
     }
     printf("%d\n", i);
-	// if (get_next_line(fd3, &out) == 1)
-	// {
-	// 	printf("%s\n", out);
-	// 	free(out);
-	// }
+	if ((i = get_next_line(fd, &out)) > 0)
+    {
+        printf("%s\n", out);
+        printf("%d\n", i);
+        free(out);
+    }
+    printf("%d\n", i);
 	// if (get_next_line(fd, &out) == 1)
 	// {
 	// 	printf("%s\n", out);

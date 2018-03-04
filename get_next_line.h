@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-# define BUFF_SIZE 15
+# define BUFF_SIZE 2
 
 int					get_next_line(int fd, char **line);
 
@@ -24,7 +24,6 @@ typedef struct		s_gnl
 {
 	char			*buff;
 	int				fd;
-	int				read_compleate;
 	struct s_gnl	*next;
 }					t_gnl;
 
