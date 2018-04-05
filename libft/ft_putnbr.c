@@ -32,10 +32,8 @@ static int		count_digit(int n)
 
 void			ft_putnbr(int n)
 {
-	int	copy;
 	int mul;
 
-	copy = n;
 	mul = count_digit(n);
 	if (n < 0)
 	{

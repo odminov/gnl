@@ -17,7 +17,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char			*ret;
 	unsigned int	i;
-	unsigned int	j;
 
 	if (!s1 || !s2)
 		return (NULL);
@@ -30,12 +29,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		ret[i] = s1[i];
 		i++;
 	}
-	j = 0;
-	while (s2[j])
+	while (*s2)
 	{
-		ret[i] = s2[j];
+		ret[i] = *s2++;
 		i++;
-		j++;
 	}
 	ret[i] = '\0';
 	return (ret);
